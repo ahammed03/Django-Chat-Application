@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
 from django.http import JsonResponse,HttpResponse
-from django.contrib.auth import authenticate, login, logout 
-from .forms import  LoginForm,SignupForm
-from django.contrib.auth.models import User
 from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout 
+from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
+from .forms import  LoginForm,SignupForm
 import json
 import secrets
 
@@ -24,8 +25,6 @@ def index(request):
 #     }
 
 
-def rooms(request):
-    return render(request,'rooms.html')
 def user_signup(request):
     if request.method == 'POST':
 
@@ -47,7 +46,7 @@ def user_login(request):
             user = authenticate(request, username=username, password=password)
             if user:
                 login(request, user)   
-                return redirect('courses')
+                return redirect('/')
             else:
                 # Add a message for invalid login details
                 messages.error(request, 'Invalid login details. Please try again.')
@@ -59,7 +58,7 @@ def user_login(request):
 # logout page
 def user_logout(request):
     logout(request)
-    return redirect('login')
+    return redirect('/')
 
 def password_reset(request):
     if request.method=='POST':
