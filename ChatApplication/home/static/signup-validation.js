@@ -23,10 +23,8 @@ function usernameValidation(){
 
             } 
         })
-
-    }else{
-        alert('Invalid Input')
     }
+
 
 
 }
