@@ -13,8 +13,7 @@
     height: 12vh;
     width: 100%;
     align-items: center;
-    background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 2px,transparent 2px, transparent 4px),linear-gradient(0deg, rgb(30, 35, 121),rgb(45, 106, 187));
-}
+    background-image: repeating-linear-gradient(135deg, rgba(0,0,0,0.04) 0px, rgba(0,0,0,0.04) 2px,transparent 2px, transparent 4px),linear-gradient(135deg, rgb(165, 230, 235),rgb(29, 32, 232));}
 .logo-title{
     width: 50%;
     text-align: center;
@@ -54,7 +53,12 @@
 
 
 
+
 @media screen and (max-width: 576px) { 
+    .options-menu-small{
+        display: inline;
+    }
+    
     .options-menu{
         display: none;
     }
@@ -91,8 +95,7 @@
     padding: 10px;
     border-bottom-left-radius: 10px;
     width: max-content;
-    background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 2px,transparent 2px, transparent 4px),linear-gradient(0deg, rgb(30, 35, 121),rgb(45, 106, 187));
-
+    background-image: repeating-linear-gradient(135deg, rgba(0,0,0,0.04) 0px, rgba(0,0,0,0.04) 2px,transparent 2px, transparent 4px),linear-gradient(135deg, rgb(165, 230, 235),rgb(29, 32, 232));
 }
 
 
