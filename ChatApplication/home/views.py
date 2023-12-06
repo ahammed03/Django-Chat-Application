@@ -22,6 +22,10 @@ def index(request):
 #         'password1': 'dummy_password123',
 #         'password2': 'dummy_password123',
 #     }
+
+
+def rooms(request):
+    return render(request,'rooms.html')
 def user_signup(request):
     if request.method == 'POST':
 
@@ -72,8 +76,6 @@ def password_reset(request):
     
     return render(request,'password-reset.html')
 
-def courses(request):
-    return HttpResponse("Courses")
 
 
 def check_username(request):

@@ -120,8 +120,20 @@
 
 .hero-section{
     width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
 }
 
+.content-1,.content-2{
+    border: solid 2px black;
+    padding: 30px;
+    height: max-content;
+    border-radius: 15px;
+    
+}
 h1{
     color: red;
 }
