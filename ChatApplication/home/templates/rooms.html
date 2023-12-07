@@ -21,11 +21,22 @@
             {% endfor %}
         </div>
         <div class="room-search">
-            <div class="input-label-box">
-                <label for="room-input">Enter Room Name</label>
-                <input type="text" id='room-input' name='room_name'>
-            </div>
-            <button>Enter</button>
+            <form method='POST'>
+                {% csrf_token %}
+                <div class="input-label-box">
+                    <label for="room-input">Enter Room Name</label>
+                    <input type="text" id='room-input' name='room_name'>
+                </div>
+                <button>Enter</button>
+
+            </form>
+
+            <!-- Neeed to Manage messsages if room is not exists -->
+            {% if messages %}  
+            {% for message in messages  %}
+            <h4>{{ message}}</h4>
+            {% endfor %}
+            {% endif %}
         </div>
 
 

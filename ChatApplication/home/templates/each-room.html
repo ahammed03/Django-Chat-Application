@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{room.name}} | Project 1</title>
+    {% load static %}
+    <link rel="stylesheet" href="/static/room.css">
+
 </head>
 <body>
-    <h1>{{room.name}}</h1>
+    <div class="hero-section">
+        <h1>{{room.name}}</h1>
+        <div class="message-box">
+           
+            <div class="sender">
+                <span class="sender-username">dummy_1</span>
+                <p class="sender-message">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+            </div>
+            <div class="sender">
+                <span class="sender-username">dummy_1</span>
+                <p class="sender-message">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+            </div>
+            <div class="reciever">
+                <span class="reciever-username">dummy_2</span>
+                <p class="reciever-message">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+            </div>
+        </div>
+        <div class="message-input-box">
+            <input type="text" placeholder="Type a message" name="input-message" id="input-message">
+            <button>Send</button>
+        </div>
+    </div>
+
+    
     
 </body>
 </html>
