@@ -20,7 +20,7 @@ def rooms(request):
     return render(request,'rooms.html',{'rooms':rooms_list})
 
 @login_required
-def room_chat(request,slug):
+def room(request,slug):
     room_details =get_object_or_404(Room, slug=slug)
     # print(room_details)
     return render(request,'each-room.html',{'room':room_details})
