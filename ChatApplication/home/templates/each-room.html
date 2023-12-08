@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{room.name}} | Project 1</title>
     {% load static %}
+
+
+
     <link rel="stylesheet" href="/static/room.css">
 
 </head>
@@ -33,12 +36,58 @@
             </div>
         </div>
         <div class="message-input-box">
-            <input type="text" placeholder="Type a message" name="input-message" id="input-message">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <input type="text" placeholder="Type a message" name="input-message" id="input-message">
             <button>Send</button>
+            </form>
         </div>
     </div>
+   
 
+    {% comment %} <script>
+        const roomSlug = "{{ room.slug }}"; // Assuming room.slug is a string
+        const jsonRoomname = JSON.stringify(roomSlug);
+        window.jsonRoomname = jsonRoomname; // Assigning to a global variable for access in other scripts
+    </script> {% endcomment %}
     
+    
+    {{room.slug|json_script:"json-roomname"}}
+    <script src="/static/room.js"></script> 
+    
+    {% comment %} <script>
+
+        const roomName = JSON.parse(document.getElementById('json-roomname').textContent);
+        console.log(roomName);
+        
+        const chatSocket = new WebSocket(
+            'ws://' 
+            + window.location.host 
+            +'/ws/' 
+            +roomName
+            +'/'
+        );
+        
+        chatSocket.onopen = function(event) {
+            console.log('WebSocket connection established.');
+        };
+        
+        chatSocket.onmessage = function(event) {
+            console.log('Received a message:', event.data);
+        };
+        
+        chatSocket.onclose = function(event) {
+            console.log('WebSocket connection closed.');
+        };
+        
+        chatSocket.onerror = function(event) {
+            console.error('WebSocket error observed:', event);
+        };
+        
+
+
+
+    </script> {% endcomment %}
     
 </body>
 </html>
