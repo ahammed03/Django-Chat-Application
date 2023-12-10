@@ -4,7 +4,7 @@ console.log(roomName);
 const chatSocket = new WebSocket(
     'ws://' 
     + window.location.host 
-    +'/ws/' 
+    +'/rooms/ws/' 
     +roomName
     +'/'
     

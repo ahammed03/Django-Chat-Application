@@ -1,7 +1,7 @@
 from django.shortcuts import render,HttpResponse,redirect,get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import Room
+from .models import Room, Message
 from django.urls import reverse
 
 
@@ -20,7 +20,8 @@ def rooms(request):
     return render(request,'rooms.html',{'rooms':rooms_list})
 
 @login_required
-def room(request,slug):
-    room_details =get_object_or_404(Room, slug=slug)
-    # print(room_details)
-    return render(request,'each-room.html',{'room':room_details})
+def room(request, slug):
+    room = Room.objects.get(slug=slug)
+    messages = Message.objects.filter(room=room)[0:25]
+
+    return render(request, 'each-room.html', {'room': room, 'messages': messages})

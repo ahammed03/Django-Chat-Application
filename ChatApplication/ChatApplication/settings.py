@@ -73,7 +73,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'ChatApplication.wsgi.application'
-ASGI_APPLICATION = "project.routing.application" #routing.py will be created later
+ASGI_APPLICATION = 'ChatApplication.asgi.application'
+
+# ASGI_APPLICATION = "project.routing.application" #routing.py will be created later
 CHANNEL_LAYERS = {
     'default': {
         'BACKEND': "channels.layers.InMemoryChannelLayer"
