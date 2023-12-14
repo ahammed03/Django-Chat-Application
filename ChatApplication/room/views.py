@@ -22,6 +22,6 @@ def rooms(request):
 @login_required
 def room(request, slug):
     room = Room.objects.get(slug=slug)
-    messages = Message.objects.filter(room=room)[0:25]
-
-    return render(request, 'each-room.html', {'room': room, 'messages': messages})
+    messages = Message.objects.filter(room=room)
+    room_list=Room.objects.all()
+    return render(request, 'message-box.html', {'room': room, 'messages': messages,'rooms':room_list})
