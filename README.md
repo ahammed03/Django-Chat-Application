@@ -54,7 +54,7 @@ The project structure is organized as follows:
 
 ## Contributors
 
-- [Ahammed Ali Shaik](https;//github.com/ahammed03/)
+- [Ahammed Ali Shaik](https://github.com/ahammed03/)
 
 Feel free to contribute, report issues, or suggest improvements by opening an issue or pull request.
 
