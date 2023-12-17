@@ -18,11 +18,18 @@ def index(request):
 
 
 # dummy_user_data = {
-#         'username': 'dummy_username',
-#         'email': 'dummy@example.com',
-#         'password1': 'dummy_password123',
-#         'password2': 'dummy_password123',
-#     }
+#    'user1':{
+#         'username': 'ahammed',
+#         'email': 'ahammedshaik0301@gmail.com',
+#         'password1': 'Yerraguntla@2001'},
+#    'user2':{'username' :'akmal',
+#             'email': 'akmal@gmail.com',
+#          'password1': 'Yerraguntla@2001'},
+#           'user3':{'username' :'toufiq',
+#             'email': 'toufiq@gmail.com',
+#          'password1': 'Yerraguntla@2001'},
+         
+#      }
 
 
 def user_signup(request):
