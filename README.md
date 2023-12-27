@@ -3,6 +3,9 @@
 
 This is a simple chat application built using Django where users can join different rooms and communicate with others in real-time.
 
+[![Demo Video](http://img.youtube.com/vi/rBezljBZIOM/0.jpg)](http://www.youtube.com/watch?v=rBezljBZIOM)
+
+
 ## Installation
 
 1. Clone the repository: git clone https://github.com/ahammed03/Django-Chat-Application.git
