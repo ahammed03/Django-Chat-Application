@@ -3,6 +3,8 @@
 
 This is a simple chat application built using Django where users can join different rooms and communicate with others in real-time.
 
+Click on the image to watch the Demo Video
+
 [![Demo Video](http://img.youtube.com/vi/rBezljBZIOM/0.jpg)](http://www.youtube.com/watch?v=rBezljBZIOM)
 
 
